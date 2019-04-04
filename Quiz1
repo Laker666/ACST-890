@@ -6,7 +6,7 @@ ls
 # Q1 b)
 grep 'taa' triplet-stop.sh
 # Q2 a)
-quiz
+exit
 cd ~/desktop/ACST890
 scp -i 43839959.pem tutes.txt ubuntu@ec2-54-252-233-232.ap-southeast-2.compute.amazonaws.com
 ssh -i 43839959.pem ubuntu@ec2-54-252-233-232.ap-southeast-2.compute.amazonaws.com
