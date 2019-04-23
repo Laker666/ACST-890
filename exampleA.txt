@@ -1,0 +1,7 @@
+high medium low
+high
+high low
+e t q
+high low medium asdw
+1 2 3
+1 2
