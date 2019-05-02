@@ -1,0 +1,32 @@
+# a
+# To download structure.pdb, firstly, we need to log in our AWS account
+cd ~/desktop/ACST890 
+ssh -i 43839959.pem ubuntu@ec2-54-252-233-232.ap-southeast-2.compute.amazonaws.com 
+# Then, using curl can easily download document online.
+curl https://www.staff.hs-mittweida.de/~wuenschi/data/media/compbiolbook/chapter-11-regex--structure.pdb > structure.pdb
+# Check whether the document is the right one
+cat structure.pdb
+# By using the code below, we can found that the name changed.
+sed 's/Beisel/Weisel/' structure.pdb
+#b
+sed '1,3d' structure.pdb
+#c
+sed -n '5,10p' structure.pdb
+#d
+sed '/MET/d' structure.pdb
+#e
+sed -n '/HELIX/{/ILE/p}' structure.pdb
+#h
+# Firstly, I downloaded the script into specific folder called “ACST890” from ilearn. 
+# Then I quiz the AWS account.
+exit
+#Then, I use “cd” to change directory to ACST890. 
+cd ~/desktop/ACST890 
+#After that, I use “scp” to upload the document to my AWS account. 
+scp -i 43839959.pem jabberwocky.txt ubuntu@ec2-54-252-233-232.ap-southeast-2.compute.amazonaws.com:
+#To check it works, I log into my account by using “ssh” and use “ls” to check whether the document is in there. 
+ssh -i 43839959.pem ubuntu@ec2-54-252-233-232.ap-southeast-2.compute.amazonaws.com 
+ls
+cat jabberwocky.txt
+# using the code below, it can be found that all blank lines are deleted
+sed '/^[[:space:]]*$/d' jabberwocky.txt
