@@ -1,0 +1,60 @@
+#Q1
+# Fistly, using ‘scp’ to download twain.txt in the AWS account. 
+# Then, download ’Question 1.py’ from my github account.
+# After that, you can execute the code by 'python3 Question1.py'
+# To check the result, you can use cat.twain.txt.
+with open('twain.txt', 'r') as file :
+  filedata = file.read()
+
+filedata = filedata.replace('Huck', 'HucK')
+
+with open('twain.txt', 'w') as file:
+  file.write(filedata)
+
+#Q3
+# define a function called LeapYear() to test whether it is a leap year.
+def LeapYear(year):
+	if (year%4 == 0) & (year%100 != 0):
+		print("%d is a leap year" %year)
+	elif year%400 == 0:
+		print("'%d' is a leap year" %year)
+	else:
+		print("'%d' is not a leap year" %year)
+    
+ #Q4
+ # sample is check the code: python3 Question4.py 2 5
+import sys
+a=int(sys.argv[1])
+b=int(sys.argv[2])
+
+import random 
+print(random.randint(a,b))
+
+#Q5
+# sample is check the code: python3 Question5.py 4 5
+import sys
+m=int(sys.argv[1])
+d=int(sys.argv[2])
+
+if (m == 3) & (d >= 20):
+     print("TRUE")
+elif (m==6) and (d<=20):
+     print("TRUE")
+elif (m>3) and (m<6):
+     print("TRUE")
+else: 
+     print ("FALSE") 
+     
+ #Q6
+ # sample is check the code: python3 Question6.py 1 100 0.01 
+
+Code:
+import sys
+t=int(sys.argv[1])
+P=int(sys.argv[2])
+r=int(sys.argv[3])
+
+import math
+print('the value is', P*math.pow(math.e,r*t))
+
+
